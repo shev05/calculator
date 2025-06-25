@@ -1,38 +1,87 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+}
+
+.clockFace {
+  height: 30%;
+  width: 100%;
+  color: white;
+  text-align: end;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  background-color: black;
+}
+
+.clockFace__text{
+  margin: 0;
+  padding: 20px;
+  font-size: 64px;
+}
+
+.default__button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttonCalculator {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  width: 100%;
+  background-color: #2d2d2d;
+  border-radius: 15px;
+}
+
+.number_button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.functional__button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.default__button {
+  background-color: #4a4a4a;
+  color: white;
+}
+.functional__button .default__button {
+  background-color: #ff9500;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.number_button .default__button {
+  background-color: #333333;
+  color: white;
+  height: 90px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gray__button .default__button{
+  background-color: #686868;
+  color: white;
+}
+
+
+.AC__button .default__button{
+  background-color: #ffffff; 
+  color: black;
 }
